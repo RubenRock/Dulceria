@@ -1,0 +1,24 @@
+select sum(total),  clave FROM
+(select sum(cantidad*piezas*-1)AS TOTAL, REMISIONES.clave from REMISIONES, INVENTARIO_EMPAQUE, inventario
+       where REMISIONES.empaque = INVENTARIO_EMPAQUE.EMPAQUE
+       and inventario.clave = inventario_empaque.clave
+       and REMISIONES.clave = inventario.clave
+       group by REMISIONES.clave
+       
+UNION
+
+select sum(cantidad*piezas)AS TOTAL, RECEPCIONES.clave from RECEPCIONES, INVENTARIO_EMPAQUE, inventario
+       where RECEPCIONES.empaque = INVENTARIO_EMPAQUE.EMPAQUE
+       and inventario.clave = inventario_empaque.clave
+       and RECEPCIONES.clave = inventario.clave
+       group by RECEPCIONES.clave
+
+UNION
+
+select sum(cantidad*piezas)AS TOTAL, DEVOLUCIONES.clave from DEVOLUCIONES, INVENTARIO_EMPAQUE, inventario
+       where DEVOLUCIONES.empaque = INVENTARIO_EMPAQUE.EMPAQUE
+       and inventario.clave = inventario_empaque.clave
+       and DEVOLUCIONES.clave = inventario.clave
+       group by DEVOLUCIONES.clave
+)
+group by clave
