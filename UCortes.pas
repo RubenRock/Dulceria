@@ -32,7 +32,6 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Lsalidas: TLabel;
-    Imprimir: TSpeedButton;
     Label7: TLabel;
     LDevoluciones: TLabel;
     Lcreditos: TLabel;
@@ -52,6 +51,7 @@ type
     Label16: TLabel;
     Label17: TLabel;
     Label18: TLabel;
+    Imprimir: TSpeedButton;
     procedure FormActivate(Sender: TObject);
     procedure filtro(tabla:string;condicion:string);
     procedure ImprimirClick(Sender: TObject);

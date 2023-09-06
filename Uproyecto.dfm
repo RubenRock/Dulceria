@@ -93,13 +93,16 @@ object FPrincipal: TFPrincipal
       end
       object Resumendeventas1: TMenuItem
         Caption = 'R&esumen de ventas'
+        Visible = False
         OnClick = Resumendeventas1Click
       end
       object N5: TMenuItem
         Caption = '-'
+        Visible = False
       end
       object Reimpresiones1: TMenuItem
         Caption = 'Re&impresiones'
+        Visible = False
         OnClick = Reimpresiones1Click
       end
     end

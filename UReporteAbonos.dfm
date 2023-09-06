@@ -28,10 +28,10 @@ object FReporteAbonos: TFReporteAbonos
     PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Microsoft Print to PDF'
     PrinterSetup.SaveDeviceSettings = True
-    PrinterSetup.mmMarginBottom = 6350
-    PrinterSetup.mmMarginLeft = 6350
-    PrinterSetup.mmMarginRight = 6350
-    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmMarginBottom = 0
+    PrinterSetup.mmMarginLeft = 0
+    PrinterSetup.mmMarginRight = 0
+    PrinterSetup.mmMarginTop = 0
     PrinterSetup.mmPaperHeight = 297000
     PrinterSetup.mmPaperWidth = 80000
     PrinterSetup.PaperSize = 256
@@ -203,6 +203,7 @@ object FReporteAbonos: TFReporteAbonos
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000}
+    Units = utMillimeters
     ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
     DeviceType = 'Printer'
     DefaultFileDeviceType = 'PDF'
@@ -253,7 +254,7 @@ object FReporteAbonos: TFReporteAbonos
       Border.BorderPositions = [bpBottom]
       Border.Visible = True
       mmBottomOffset = 0
-      mmHeight = 78846
+      mmHeight = 63236
       mmPrintPosition = 0
       object razon: TppLabel
         DesignLayer = ppDesignLayer3
@@ -267,7 +268,7 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4233
-        mmLeft = 6085
+        mmLeft = 4391
         mmTop = 2117
         mmWidth = 55563
         BandType = 0
@@ -285,7 +286,7 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4233
-        mmLeft = 11906
+        mmLeft = 10212
         mmTop = 14288
         mmWidth = 39158
         BandType = 0
@@ -302,8 +303,8 @@ object FReporteAbonos: TFReporteAbonos
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 6350
-        mmTop = 63187
+        mmLeft = 4656
+        mmTop = 49393
         mmWidth = 28046
         BandType = 0
         LayerName = BandLayer3
@@ -320,8 +321,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 3969
-        mmLeft = 39688
-        mmTop = 44186
+        mmLeft = 37994
+        mmTop = 34990
         mmWidth = 10583
         BandType = 0
         LayerName = BandLayer3
@@ -338,8 +339,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 45508
-        mmTop = 62922
+        mmLeft = 42362
+        mmTop = 49128
         mmWidth = 14023
         BandType = 0
         LayerName = BandLayer3
@@ -355,8 +356,8 @@ object FReporteAbonos: TFReporteAbonos
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 6085
-        mmTop = 72515
+        mmLeft = 4391
+        mmTop = 58721
         mmWidth = 22754
         BandType = 0
         LayerName = BandLayer3
@@ -373,8 +374,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 33073
-        mmTop = 72515
+        mmLeft = 29927
+        mmTop = 58721
         mmWidth = 25929
         BandType = 0
         LayerName = BandLayer3
@@ -390,8 +391,8 @@ object FReporteAbonos: TFReporteAbonos
         Font.Style = []
         Transparent = True
         mmHeight = 4234
-        mmLeft = 6085
-        mmTop = 54504
+        mmLeft = 4391
+        mmTop = 40710
         mmWidth = 19050
         BandType = 0
         LayerName = BandLayer3
@@ -408,8 +409,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 48154
-        mmTop = 54504
+        mmLeft = 45008
+        mmTop = 40710
         mmWidth = 11113
         BandType = 0
         LayerName = BandLayer3
@@ -426,7 +427,7 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4233
-        mmLeft = 9790
+        mmLeft = 8096
         mmTop = 7938
         mmWidth = 46566
         BandType = 0
@@ -443,8 +444,8 @@ object FReporteAbonos: TFReporteAbonos
         Font.Style = []
         Transparent = True
         mmHeight = 4234
-        mmLeft = 17992
-        mmTop = 22315
+        mmLeft = 16298
+        mmTop = 19411
         mmWidth = 12700
         BandType = 0
         LayerName = BandLayer3
@@ -461,8 +462,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 4233
-        mmLeft = 43127
-        mmTop = 22315
+        mmLeft = 41433
+        mmTop = 19411
         mmWidth = 12700
         BandType = 0
         LayerName = BandLayer3
@@ -479,8 +480,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4234
-        mmLeft = 26988
-        mmTop = 34970
+        mmLeft = 25294
+        mmTop = 29646
         mmWidth = 12267
         BandType = 0
         LayerName = BandLayer3
@@ -497,8 +498,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 50800
-        mmTop = 29701
+        mmLeft = 47654
+        mmTop = 25103
         mmWidth = 8996
         BandType = 0
         LayerName = BandLayer3
@@ -515,8 +516,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 3969
-        mmLeft = 11642
-        mmTop = 44186
+        mmLeft = 9948
+        mmTop = 34990
         mmWidth = 8996
         BandType = 0
         LayerName = BandLayer3
@@ -527,7 +528,7 @@ object FReporteAbonos: TFReporteAbonos
       Background2.Brush.Style = bsClear
       PrintHeight = phDynamic
       mmBottomOffset = 0
-      mmHeight = 6085
+      mmHeight = 5292
       mmPrintPosition = 0
       object ppDBText1: TppDBText
         DesignLayer = ppDesignLayer3
@@ -544,7 +545,7 @@ object FReporteAbonos: TFReporteAbonos
         DataPipelineName = 'ppBDEPipeline2'
         mmHeight = 4763
         mmLeft = 47890
-        mmTop = 794
+        mmTop = 0
         mmWidth = 12700
         BandType = 4
         LayerName = BandLayer3
@@ -564,7 +565,7 @@ object FReporteAbonos: TFReporteAbonos
         DataPipelineName = 'ppBDEPipeline2'
         mmHeight = 4763
         mmLeft = 2646
-        mmTop = 794
+        mmTop = 0
         mmWidth = 36801
         BandType = 4
         LayerName = BandLayer3
@@ -596,8 +597,8 @@ object FReporteAbonos: TFReporteAbonos
         Font.Style = [fsBold]
         Transparent = True
         mmHeight = 4233
-        mmLeft = 6350
-        mmTop = 3969
+        mmLeft = 3688
+        mmTop = 1307
         mmWidth = 9790
         BandType = 7
         LayerName = BandLayer3
@@ -614,8 +615,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 49742
-        mmTop = 3969
+        mmLeft = 47080
+        mmTop = 1307
         mmWidth = 10054
         BandType = 7
         LayerName = BandLayer3
@@ -632,8 +633,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4234
-        mmLeft = 5466
-        mmTop = 15610
+        mmLeft = 2804
+        mmTop = 7382
         mmWidth = 53710
         BandType = 7
         LayerName = BandLayer3
@@ -650,8 +651,8 @@ object FReporteAbonos: TFReporteAbonos
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4233
-        mmLeft = 20373
-        mmTop = 20902
+        mmLeft = 17711
+        mmTop = 12674
         mmWidth = 22490
         BandType = 7
         LayerName = BandLayer3

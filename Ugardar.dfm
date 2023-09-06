@@ -3,7 +3,7 @@ object Fguardar: TFguardar
   Top = 0
   BorderStyle = bsDialog
   Caption = 'Impresiones'
-  ClientHeight = 247
+  ClientHeight = 206
   ClientWidth = 331
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,7 +13,6 @@ object Fguardar: TFguardar
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
-  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -52,8 +51,8 @@ object Fguardar: TFguardar
     end
   end
   object Bnotas: TBitBtn
-    Left = 273
-    Top = 91
+    Left = 281
+    Top = 8
     Width = 75
     Height = 29
     Caption = '&Nota'
@@ -109,8 +108,8 @@ object Fguardar: TFguardar
     OnClick = BtiquetClick
   end
   object Bnocomprobante: TBitBtn
-    Left = 248
-    Top = 210
+    Left = 281
+    Top = 127
     Width = 145
     Height = 29
     Caption = '&Cliente sin comprobante'
@@ -138,8 +137,8 @@ object Fguardar: TFguardar
     OnClick = BnocomprobanteClick
   end
   object Bok: TBitBtn
-    Left = 248
-    Top = 161
+    Left = 281
+    Top = 75
     Width = 75
     Height = 29
     Caption = '&Ok'

@@ -72,7 +72,6 @@ type
     REDOMICILIO: TppLabel;
     ppTitleBand2: TppTitleBand;
     nombre: TppLabel;
-    direccion: TppLabel;
     ppLabel17: TppLabel;
     ppLabel18: TppLabel;
     Eusuario: TppLabel;
@@ -224,6 +223,33 @@ type
     telefono: TppLabel;
     razon: TppLabel;
     COTIZACION: TppLabel;
+    direccion: TppLabel;
+    Reportecredito: TppReport;
+    ppHeaderBand6: TppHeaderBand;
+    ppDetailBand10: TppDetailBand;
+    ppSummaryBand10: TppSummaryBand;
+    CREDITO2: TppLabel;
+    CREDITO6: TppLabel;
+    CREDITO1: TppLabel;
+    FECHAPAGO: TppLabel;
+    ppDesignLayers10: TppDesignLayers;
+    ppDesignLayer10: TppDesignLayer;
+    ppParameterList10: TppParameterList;
+    razoncre: TppLabel;
+    ppLabel3: TppLabel;
+    ppLabel4: TppLabel;
+    usuariocre: TppLabel;
+    clientecre: TppLabel;
+    fechacre: TppLabel;
+    foliocre: TppLabel;
+    ppLabel46: TppLabel;
+    condicioncre: TppLabel;
+    domiciliocre: TppLabel;
+    ppDBText13: TppDBText;
+    ppDBText14: TppDBText;
+    ppDBText15: TppDBText;
+    ppLabel52: TppLabel;
+    totalcre: TppLabel;
   private
     { Private declarations }
   public

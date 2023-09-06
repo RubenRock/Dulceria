@@ -29,7 +29,6 @@ type
     procedure imprimirtiquetMatriz;
     procedure imprimirtiquetSinComprobante80(Sender: TObject);
     procedure imprimirtiquetSinComprobante_matriz(Sender: TObject);
-    procedure FormActivate(Sender: TObject);
     procedure BokClick(Sender: TObject);
     procedure llenarTiquet80;
     procedure llenarTiquet80Traspado;
@@ -331,8 +330,36 @@ end;
 
 procedure TFguardar.imprimirtiquet80(Sender: TObject);
 begin
-  if fremisiones.Ltraspasos.Caption = 'SI' then
-    llenarTiquet80Traspado
+  if Fremisiones.Econdicion.Text='CREDITO' then
+  BEGIN
+    freportetiquet.razoncre.Caption:=modulo.QryExtras['razon'];
+    freportetiquet.FECHAPAGO.Caption:=datetostr(Date+15);
+    freportetiquet.foliocre.Caption:= Fremisiones.Efolio.Text;
+    freportetiquet.clientecre.Caption:= Fremisiones.Ecliente.Text;
+    freportetiquet.fechacre.Caption:= datetostr(date)+ ' '+timetostr(time);
+    freportetiquet.totalcre.Caption:= Format('%0:2f',[strtofloat(Fremisiones.nota.Caption)]);
+    freportetiquet.usuariocre.Caption:= fverificausu.Lusuario.Caption;
+    freportetiquet.condicioncre.Caption:= fremisiones.Econdicion.Text;
+
+    FREMISIONES.Close;
+    close;
+
+    try
+      freportetiquet.Reportecredito.Print;
+      CLOSE;
+
+    except
+      on E : Exception do
+      begin
+        ShowMessage(E.ClassName+'  '+E.Message);
+        showmessage('Ocurrio un problema durante la impresion de la nota, intenta imprimirla de nuevo');
+        modulo.qryborraremiaux.ExecSQL;
+        modulo.qryremiaux2.Close;modulo.qryremiaux2.Open;
+        fremisiones.Close;
+        close;
+      end;
+    end;
+  END
   else
     llenarTiquet80;
 end;
@@ -757,8 +784,11 @@ procedure TFguardar.activar_botones;
 begin
   Btiquet.Enabled:=true;
   Bok.Enabled:=false;
+  Bok.visible:=false;
   Bnotas.Enabled:=false;
+  Bnotas.visible:=false;
   Bnocomprobante.Enabled:=false;
+  Bnocomprobante.visible:=false;
 end;
 
 procedure TFguardar.BnocomprobanteClick(Sender: TObject);
@@ -853,6 +883,7 @@ begin
   if modulo.QryExtras['imprimir_en_pantalla']='1' then  //'1' si, '0' no
   begin
     Freportetiquet.report1.DeviceType:='Screen';
+    Freportetiquet.Reportecredito.DeviceType:='Screen';
     Freportetiquet.Report1_copia.DeviceType:='Screen';
     Freportetiquet.report2.DeviceType:='Screen';
     Freportetiquet.reporteTraspaso.DeviceType:='Screen';
@@ -863,6 +894,7 @@ begin
   else
   begin
     Freportetiquet.report1.DeviceType:='Printer';
+    Freportetiquet.Reportecredito.DeviceType:='Printer';
     Freportetiquet.Report1_copia.DeviceType:='Printer';
     Freportetiquet.report2.DeviceType:='Printer';
     Freportetiquet.reporteTraspaso.DeviceType:='Printer';
@@ -887,32 +919,6 @@ begin
   Bok.Enabled:=false;
   Bnotas.Enabled:=false;
   Bnocomprobante.Enabled:=false;
-end;
-
-procedure TFguardar.FormActivate(Sender: TObject);
-var
-  segunda_caja:boolean;
-begin
-  if fremisiones.Ltraspasos.Caption='SI' then
-  begin
-    btiquet.Visible:=true;
-    bnotas.Visible:=false;
-    bnocomprobante.Visible:=false;
-    bok.Visible:=false;
-  end
-  else
-  begin
-    modulo.QryExtras.Open('select * from extras');
-    //segunda_caja:= modulo.QryExtras['segundacaja']='1'; //true
-    segunda_caja:=false;
-
-    bok.Visible:=(segunda_caja and (fremisiones.Econdicion.Text = 'CONTADO'));
-    btiquet.Visible:=not (segunda_caja and (fremisiones.Econdicion.Text = 'CONTADO'));
-    bnotas.Visible:=not (segunda_caja and (fremisiones.Econdicion.Text = 'CONTADO'));
-    bnocomprobante.Visible:=not (segunda_caja and (fremisiones.Econdicion.Text = 'CONTADO'));
-  end;
-
-
 end;
 
 end.

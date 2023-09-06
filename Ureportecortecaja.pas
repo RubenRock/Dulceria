@@ -21,7 +21,6 @@ type
     ppDesignLayer3: TppDesignLayer;
     ppParameterList3: TppParameterList;
     razon: TppLabel;
-    nombre: TppLabel;
     ppLabel3: TppLabel;
     ppLabel4: TppLabel;
     ppLabel5: TppLabel;
@@ -94,6 +93,7 @@ type
     ppLabel43: TppLabel;
     ppLabel44: TppLabel;
     ppLabel45: TppLabel;
+    nombre: TppLabel;
   private
     { Private declarations }
   public

@@ -28,10 +28,10 @@ object Freportecortecaja: TFreportecortecaja
     PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Microsoft Print to PDF'
     PrinterSetup.SaveDeviceSettings = True
-    PrinterSetup.mmMarginBottom = 6350
-    PrinterSetup.mmMarginLeft = 6350
-    PrinterSetup.mmMarginRight = 6350
-    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmMarginBottom = 0
+    PrinterSetup.mmMarginLeft = 0
+    PrinterSetup.mmMarginRight = 0
+    PrinterSetup.mmMarginTop = 0
     PrinterSetup.mmPaperHeight = 297000
     PrinterSetup.mmPaperWidth = 80000
     PrinterSetup.PaperSize = 256
@@ -203,6 +203,7 @@ object Freportecortecaja: TFreportecortecaja
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000}
+    Units = utMillimeters
     ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
     DeviceType = 'Screen'
     DefaultFileDeviceType = 'PDF'
@@ -253,14 +254,14 @@ object Freportecortecaja: TFreportecortecaja
       Border.BorderPositions = [bpBottom]
       Border.Visible = True
       mmBottomOffset = 0
-      mmHeight = 100806
+      mmHeight = 84931
       mmPrintPosition = 0
       object ppShape1: TppShape
         DesignLayer = ppDesignLayer3
         UserName = 'Shape1'
         mmHeight = 15613
-        mmLeft = 10845
-        mmTop = 64039
+        mmLeft = 9151
+        mmTop = 51213
         mmWidth = 47892
         BandType = 0
         LayerName = BandLayer3
@@ -277,27 +278,9 @@ object Freportecortecaja: TFreportecortecaja
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4233
-        mmLeft = 6085
-        mmTop = 2117
+        mmLeft = 4391
+        mmTop = 665
         mmWidth = 55563
-        BandType = 0
-        LayerName = BandLayer3
-      end
-      object nombre: TppLabel
-        DesignLayer = ppDesignLayer3
-        UserName = 'Label7'
-        Caption = 'GRUPO ABARROTERO SAN MARTIN'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 9
-        Font.Style = [fsBold]
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 9790
-        mmTop = 7938
-        mmWidth = 46566
         BandType = 0
         LayerName = BandLayer3
       end
@@ -312,8 +295,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = [fsBold]
         Transparent = True
         mmHeight = 4233
-        mmLeft = 19315
-        mmTop = 14817
+        mmLeft = 17621
+        mmTop = 5621
         mmWidth = 21166
         BandType = 0
         LayerName = BandLayer3
@@ -329,8 +312,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 12965
-        mmTop = 29369
+        mmLeft = 11271
+        mmTop = 18963
         mmWidth = 5821
         BandType = 0
         LayerName = BandLayer3
@@ -346,8 +329,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 12965
-        mmTop = 35190
+        mmLeft = 11271
+        mmTop = 24784
         mmWidth = 3969
         BandType = 0
         LayerName = BandLayer3
@@ -364,8 +347,8 @@ object Freportecortecaja: TFreportecortecaja
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 38629
-        mmTop = 29369
+        mmLeft = 36935
+        mmTop = 18963
         mmWidth = 14552
         BandType = 0
         LayerName = BandLayer3
@@ -382,8 +365,8 @@ object Freportecortecaja: TFreportecortecaja
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3968
-        mmLeft = 37571
-        mmTop = 35190
+        mmLeft = 35877
+        mmTop = 24784
         mmWidth = 15610
         BandType = 0
         LayerName = BandLayer3
@@ -399,8 +382,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 14300
-        mmTop = 65626
+        mmLeft = 12606
+        mmTop = 52800
         mmWidth = 14288
         BandType = 0
         LayerName = BandLayer3
@@ -416,8 +399,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 14300
-        mmTop = 74093
+        mmLeft = 12606
+        mmTop = 61267
         mmWidth = 12700
         BandType = 0
         LayerName = BandLayer3
@@ -434,8 +417,8 @@ object Freportecortecaja: TFreportecortecaja
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 3968
-        mmLeft = 24342
-        mmTop = 21167
+        mmLeft = 22648
+        mmTop = 10761
         mmWidth = 10583
         BandType = 0
         LayerName = BandLayer3
@@ -452,8 +435,8 @@ object Freportecortecaja: TFreportecortecaja
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 40743
-        mmTop = 65626
+        mmLeft = 39049
+        mmTop = 52800
         mmWidth = 16404
         BandType = 0
         LayerName = BandLayer3
@@ -470,8 +453,8 @@ object Freportecortecaja: TFreportecortecaja
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 43124
-        mmTop = 74093
+        mmLeft = 41430
+        mmTop = 61267
         mmWidth = 14023
         BandType = 0
         LayerName = BandLayer3
@@ -487,8 +470,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = [fsBold]
         Transparent = True
         mmHeight = 4233
-        mmLeft = 6085
-        mmTop = 46567
+        mmLeft = 4391
+        mmTop = 33741
         mmWidth = 10055
         BandType = 0
         LayerName = BandLayer3
@@ -500,14 +483,14 @@ object Freportecortecaja: TFreportecortecaja
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 9
+        Font.Size = 10
         Font.Style = [fsBold]
         TextAlignment = taRightJustified
         Transparent = True
-        mmHeight = 3969
-        mmLeft = 48154
-        mmTop = 46567
-        mmWidth = 10848
+        mmHeight = 4233
+        mmLeft = 44979
+        mmTop = 33867
+        mmWidth = 12436
         BandType = 0
         LayerName = BandLayer3
       end
@@ -522,8 +505,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 6085
-        mmTop = 84412
+        mmLeft = 4391
+        mmTop = 71586
         mmWidth = 22754
         BandType = 0
         LayerName = BandLayer3
@@ -535,14 +518,14 @@ object Freportecortecaja: TFreportecortecaja
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 9
+        Font.Size = 10
         Font.Style = []
         TextAlignment = taRightJustified
         Transparent = True
-        mmHeight = 3969
-        mmLeft = 33073
-        mmTop = 84412
-        mmWidth = 25929
+        mmHeight = 4234
+        mmLeft = 29369
+        mmTop = 71702
+        mmWidth = 28046
         BandType = 0
         LayerName = BandLayer3
       end
@@ -557,8 +540,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 6350
-        mmTop = 93143
+        mmLeft = 4656
+        mmTop = 80317
         mmWidth = 12171
         BandType = 0
         LayerName = BandLayer3
@@ -570,14 +553,14 @@ object Freportecortecaja: TFreportecortecaja
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 9
+        Font.Size = 10
         Font.Style = []
         TextAlignment = taRightJustified
         Transparent = True
-        mmHeight = 3969
-        mmLeft = 46302
-        mmTop = 93143
-        mmWidth = 12965
+        mmHeight = 4234
+        mmLeft = 43127
+        mmTop = 80433
+        mmWidth = 14552
         BandType = 0
         LayerName = BandLayer3
       end
@@ -593,8 +576,8 @@ object Freportecortecaja: TFreportecortecaja
         Transparent = True
         Visible = False
         mmHeight = 4233
-        mmLeft = 5027
-        mmTop = 21696
+        mmLeft = 3333
+        mmTop = 11290
         mmWidth = 794
         BandType = 0
         LayerName = BandLayer3
@@ -604,8 +587,8 @@ object Freportecortecaja: TFreportecortecaja
         UserName = 'Line1'
         Weight = 0.750000000000000000
         mmHeight = 3175
-        mmLeft = 6085
-        mmTop = 58747
+        mmLeft = 4391
+        mmTop = 45921
         mmWidth = 52123
         BandType = 0
         LayerName = BandLayer3
@@ -621,8 +604,8 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = [fsBold]
         Transparent = True
         mmHeight = 4233
-        mmLeft = 5821
-        mmTop = 53441
+        mmLeft = 4127
+        mmTop = 40615
         mmWidth = 14023
         BandType = 0
         LayerName = BandLayer3
@@ -635,8 +618,8 @@ object Freportecortecaja: TFreportecortecaja
         MaintainAspectRatio = False
         Visible = False
         mmHeight = 5292
-        mmLeft = 23019
-        mmTop = 38100
+        mmLeft = 21325
+        mmTop = 27694
         mmWidth = 8467
         BandType = 0
         LayerName = BandLayer3
@@ -647,7 +630,7 @@ object Freportecortecaja: TFreportecortecaja
       Background2.Brush.Style = bsClear
       PrintHeight = phDynamic
       mmBottomOffset = 0
-      mmHeight = 6085
+      mmHeight = 5027
       mmPrintPosition = 0
       object ppDBText5: TppDBText
         DesignLayer = ppDesignLayer3
@@ -663,8 +646,8 @@ object Freportecortecaja: TFreportecortecaja
         Transparent = True
         DataPipelineName = 'ppBDEPipeline2'
         mmHeight = 4763
-        mmLeft = 2646
-        mmTop = 794
+        mmLeft = 710
+        mmTop = 0
         mmWidth = 42863
         BandType = 4
         LayerName = BandLayer3
@@ -683,8 +666,8 @@ object Freportecortecaja: TFreportecortecaja
         Transparent = True
         DataPipelineName = 'ppBDEPipeline2'
         mmHeight = 4763
-        mmLeft = 47890
-        mmTop = 794
+        mmLeft = 45954
+        mmTop = 0
         mmWidth = 12700
         BandType = 4
         LayerName = BandLayer3
@@ -717,7 +700,7 @@ object Freportecortecaja: TFreportecortecaja
         Transparent = True
         mmHeight = 4233
         mmLeft = 16661
-        mmTop = 22255
+        mmTop = 14511
         mmWidth = 12700
         BandType = 7
         LayerName = BandLayer3
@@ -735,7 +718,7 @@ object Freportecortecaja: TFreportecortecaja
         Transparent = True
         mmHeight = 4233
         mmLeft = 46567
-        mmTop = 22255
+        mmTop = 14511
         mmWidth = 12700
         BandType = 7
         LayerName = BandLayer3
@@ -764,14 +747,14 @@ object Freportecortecaja: TFreportecortecaja
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
-        Font.Size = 9
+        Font.Size = 10
         Font.Style = []
         TextAlignment = taRightJustified
         Transparent = True
-        mmHeight = 3969
-        mmLeft = 39693
-        mmTop = 2640
-        mmWidth = 19844
+        mmHeight = 4233
+        mmLeft = 37571
+        mmTop = 2646
+        mmWidth = 21960
         BandType = 7
         LayerName = BandLayer3
       end
@@ -785,9 +768,10 @@ object Freportecortecaja: TFreportecortecaja
         Font.Size = 9
         Font.Style = []
         Transparent = True
+        Visible = False
         mmHeight = 4233
-        mmLeft = 5027
-        mmTop = 9525
+        mmLeft = 6085
+        mmTop = 36248
         mmWidth = 14023
         BandType = 7
         LayerName = BandLayer3
@@ -803,9 +787,10 @@ object Freportecortecaja: TFreportecortecaja
         Font.Style = []
         TextAlignment = taRightJustified
         Transparent = True
+        Visible = False
         mmHeight = 3969
-        mmLeft = 43127
-        mmTop = 9527
+        mmLeft = 44186
+        mmTop = 36248
         mmWidth = 15610
         BandType = 7
         LayerName = BandLayer3
@@ -822,8 +807,27 @@ object Freportecortecaja: TFreportecortecaja
         Transparent = True
         mmHeight = 4233
         mmLeft = 16669
-        mmTop = 15875
+        mmTop = 8131
         mmWidth = 9260
+        BandType = 7
+        LayerName = BandLayer3
+      end
+      object nombre: TppLabel
+        DesignLayer = ppDesignLayer3
+        UserName = 'nombre'
+        Caption = 'GRUPO ABARROTERO SAN MARTIN'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        Visible = False
+        mmHeight = 4233
+        mmLeft = 8996
+        mmTop = 29104
+        mmWidth = 46567
         BandType = 7
         LayerName = BandLayer3
       end

@@ -269,7 +269,7 @@ object FreporteRecepcion: TFreporteRecepcion
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4234
-        mmLeft = 13494
+        mmLeft = 11558
         mmTop = 1058
         mmWidth = 33867
         BandType = 1
@@ -287,7 +287,7 @@ object FreporteRecepcion: TFreporteRecepcion
         TextAlignment = taCentered
         Transparent = True
         mmHeight = 4233
-        mmLeft = 10054
+        mmLeft = 8118
         mmTop = 6350
         mmWidth = 39688
         BandType = 1
@@ -304,7 +304,7 @@ object FreporteRecepcion: TFreporteRecepcion
         Font.Style = []
         Transparent = True
         mmHeight = 4233
-        mmLeft = 7847
+        mmLeft = 5911
         mmTop = 12413
         mmWidth = 12700
         BandType = 1
@@ -322,7 +322,7 @@ object FreporteRecepcion: TFreporteRecepcion
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 4233
-        mmLeft = 47451
+        mmLeft = 45515
         mmTop = 12413
         mmWidth = 12700
         BandType = 1
@@ -339,7 +339,7 @@ object FreporteRecepcion: TFreporteRecepcion
         Font.Style = []
         Transparent = True
         mmHeight = 4234
-        mmLeft = 6085
+        mmLeft = 4149
         mmTop = 18785
         mmWidth = 7673
         BandType = 1
@@ -356,7 +356,7 @@ object FreporteRecepcion: TFreporteRecepcion
         Font.Style = []
         Transparent = True
         mmHeight = 3969
-        mmLeft = 829
+        mmLeft = 0
         mmTop = 25561
         mmWidth = 10584
         BandType = 1
@@ -374,7 +374,7 @@ object FreporteRecepcion: TFreporteRecepcion
         TextAlignment = taRightJustified
         Transparent = True
         mmHeight = 3969
-        mmLeft = 50874
+        mmLeft = 48938
         mmTop = 25561
         mmWidth = 9261
         BandType = 1
@@ -388,7 +388,7 @@ object FreporteRecepcion: TFreporteRecepcion
         MaintainAspectRatio = False
         Visible = False
         mmHeight = 5292
-        mmLeft = 55708
+        mmLeft = 53772
         mmTop = 7534
         mmWidth = 6085
         BandType = 1
@@ -439,7 +439,7 @@ object FreporteRecepcion: TFreporteRecepcion
         mmHeight = 4763
         mmLeft = 8022
         mmTop = 0
-        mmWidth = 43055
+        mmWidth = 49790
         BandType = 4
         LayerName = Foreground1
       end
@@ -450,14 +450,14 @@ object FreporteRecepcion: TFreporteRecepcion
         DataPipeline = ppBDEPipeline1
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 9
+        Font.Name = 'Arial'
+        Font.Size = 10
         Font.Style = []
         TextAlignment = taRightJustified
         Transparent = True
         DataPipelineName = 'ppBDEPipeline1'
         mmHeight = 4763
-        mmLeft = 49319
+        mmLeft = 48835
         mmTop = 4898
         mmWidth = 10848
         BandType = 4

@@ -1141,8 +1141,8 @@ begin
       //fguardar.bnotas.visible:=false;
       //fguardar.Bnocomprobante.Visible:=false;
       //boton nota no aparece para las papelerias solo para ventas a credito
-      if Econdicion.Text = 'CREDITO' then
-        fguardar.bnotas.visible:=true;
+      //if Econdicion.Text = 'CREDITO' then
+        //fguardar.bnotas.visible:=true;
 
       //las papelerias no hacen cotizaciones
       if Econdicion.Text = 'COTIZACION' then

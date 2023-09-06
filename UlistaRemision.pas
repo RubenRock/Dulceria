@@ -44,6 +44,7 @@ type
     procedure paginar;
     procedure DBGrid1CellClick(Column: TColumn);
     procedure imprimirtiquet80;
+    procedure imprimirtiquet80credito;
     procedure imprimirtiquet80Traspaso;
     procedure imprimirtiquet58;
     procedure imprimirtiquetMatriz;
@@ -118,6 +119,7 @@ begin
   freportenotascarta.Reportecredito.PrinterSetup.PrinterName:=modulo.Qryimpresora['nota'];
 
   freportetiquet.report1.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
+  freportetiquet.Reportecredito.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
   freportetiquet.report_matriz_punto.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
   freportetiquet.Report1_copia.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
   freportetiquet.reporteTraspaso.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
@@ -130,6 +132,7 @@ begin
     freportenotascarta.ReporteNotas.DeviceType:='Screen';
     freportenotascarta.Reportecredito.DeviceType:='Screen';
     freportetiquet.report1.DeviceType:='Screen';
+    freportetiquet.Reportecredito.DeviceType:='Screen';
     freportetiquet.Report1_copia.DeviceType:='Screen';
     freportetiquet.report2.DeviceType:='Screen';
     freportetiquet.reporteTraspaso.DeviceType:='Screen';
@@ -144,6 +147,7 @@ begin
     freportenotascarta.ReporteNotas.DeviceType:='Printer';
     freportenotascarta.Reportecredito.DeviceType:='Printer';
     freportetiquet.report1.DeviceType:='Printer';
+    freportetiquet.Reportecredito.DeviceType:='Printer';
     freportetiquet.Report1_copia.DeviceType:='Printer';
     freportetiquet.report2.DeviceType:='Printer';
     freportetiquet.reporteTraspaso.DeviceType:='Printer';
@@ -437,12 +441,19 @@ begin
           begin
             if modulo.QryListaremision['impresion']='TICKET' then
             begin
-              if modulo.QryExtras['tiquet']='0' then
-                imprimirtiquet80;
-              if modulo.QryExtras['tiquet']='1' then
-                imprimirtiquet58;
-              if modulo.QryExtras['tiquet']='2' then
-                imprimirtiquetMatriz;
+              if modulo.QryListaremision['condicion']='CREDITO' then
+              begin
+                imprimirtiquet80credito;
+              end
+              else
+              begin
+                if modulo.QryExtras['tiquet']='0' then
+                  imprimirtiquet80;
+                if modulo.QryExtras['tiquet']='1' then
+                  imprimirtiquet58;
+                if modulo.QryExtras['tiquet']='2' then
+                  imprimirtiquetMatriz;
+              end
             end
             else
             begin
@@ -703,7 +714,7 @@ begin
 
     try
       freportetiquet.report1.Print;
-      freportetiquet.Report1_copia.Print;
+      //freportetiquet.Report1_copia.Print;
     except
       showmessage('Hay error con la impresora');
     end;
@@ -719,6 +730,30 @@ begin
     END;
 
   end;
+end;
+
+procedure TFlistaRemision.imprimirtiquet80credito;
+var
+  fechacredito: TDateTime;
+begin
+    freportetiquet.razoncre.Caption:=modulo.QryExtras['razon'];
+    freportetiquet.usuariocre.Caption:=modulo.QryListaremision['vendedor'];
+    freportetiquet.clientecre.Caption:=modulo.QryListaremision['cliente'];
+    freportetiquet.domiciliocre.Caption:=modulo.QryListaremision['domicilio'];
+    freportetiquet.fechacre.Caption:=modulo.QryListaremision['fecha'];
+    freportetiquet.foliocre.Caption:=modulo.QryListaremision['Folio'];
+    freportetiquet.totalcre.Caption:=FREMISIONES.nota.Caption;
+    freportetiquet.condicioncre.Caption:=modulo.QryListaremision['condicion'];
+    fechacredito:=modulo.QryListaremision['FECHA'];
+    freportetiquet.FECHAPAGO.Caption:=datetostr(fechacredito+15);
+
+    try
+      freportetiquet.Reportecredito.Print;
+      //freportetiquet.Report1_copia.Print;
+    except
+      showmessage('Hay error con la impresora');
+    end;
+
 end;
 
 procedure TFlistaRemision.imprimirtiquet80Traspaso;

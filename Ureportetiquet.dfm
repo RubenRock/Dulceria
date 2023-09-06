@@ -255,7 +255,7 @@ object Freportetiquet: TFreportetiquet
       Border.BorderPositions = [bpBottom]
       Border.Visible = True
       mmBottomOffset = 0
-      mmHeight = 44186
+      mmHeight = 38100
       mmPrintPosition = 0
       object nombre: TppLabel
         DesignLayer = ppDesignLayer2
@@ -275,24 +275,6 @@ object Freportetiquet: TFreportetiquet
         BandType = 1
         LayerName = Foreground1
       end
-      object direccion: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'direccion'
-        Caption = 'AV CENTRAL SUR No. 25'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 10
-        Font.Style = []
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 4233
-        mmLeft = 14197
-        mmTop = 6353
-        mmWidth = 34132
-        BandType = 1
-        LayerName = Foreground1
-      end
       object ppLabel17: TppLabel
         DesignLayer = ppDesignLayer2
         UserName = 'Label17'
@@ -305,7 +287,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 4233
         mmLeft = 10493
-        mmTop = 11522
+        mmTop = 6682
         mmWidth = 38894
         BandType = 1
         LayerName = Foreground1
@@ -322,7 +304,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 4233
         mmLeft = 7847
-        mmTop = 16285
+        mmTop = 11445
         mmWidth = 12700
         BandType = 1
         LayerName = Foreground1
@@ -340,7 +322,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 4233
         mmLeft = 47451
-        mmTop = 16285
+        mmTop = 11445
         mmWidth = 12700
         BandType = 1
         LayerName = Foreground1
@@ -357,7 +339,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 4233
         mmLeft = 6153
-        mmTop = 28191
+        mmTop = 23351
         mmWidth = 12171
         BandType = 1
         LayerName = Foreground1
@@ -374,7 +356,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 3969
         mmLeft = 829
-        mmTop = 38629
+        mmTop = 33789
         mmWidth = 10584
         BandType = 1
         LayerName = Foreground1
@@ -392,7 +374,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 3969
         mmLeft = 50874
-        mmTop = 38629
+        mmTop = 33789
         mmWidth = 9261
         BandType = 1
         LayerName = Foreground1
@@ -409,7 +391,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 4234
         mmLeft = 7847
-        mmTop = 21576
+        mmTop = 16736
         mmWidth = 16934
         BandType = 1
         LayerName = Foreground1
@@ -427,7 +409,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 4234
         mmLeft = 44011
-        mmTop = 21576
+        mmTop = 16736
         mmWidth = 16140
         BandType = 1
         LayerName = Foreground1
@@ -441,7 +423,7 @@ object Freportetiquet: TFreportetiquet
         Visible = False
         mmHeight = 5292
         mmLeft = 55708
-        mmTop = 7534
+        mmTop = 2694
         mmWidth = 6085
         BandType = 1
         LayerName = Foreground1
@@ -458,7 +440,7 @@ object Freportetiquet: TFreportetiquet
         Transparent = True
         mmHeight = 4234
         mmLeft = 1920
-        mmTop = 32953
+        mmTop = 28113
         mmWidth = 14817
         BandType = 1
         LayerName = Foreground1
@@ -519,8 +501,8 @@ object Freportetiquet: TFreportetiquet
         DataPipeline = ppBDEPipeline1
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 9
+        Font.Name = 'Arial'
+        Font.Size = 10
         Font.Style = []
         TextAlignment = taRightJustified
         Transparent = True
@@ -654,6 +636,25 @@ object Freportetiquet: TFreportetiquet
         mmHeight = 9790
         mmLeft = 6350
         mmTop = 31485
+        mmWidth = 34131
+        BandType = 7
+        LayerName = Foreground1
+      end
+      object direccion: TppLabel
+        DesignLayer = ppDesignLayer2
+        UserName = 'direccion2'
+        Caption = 'AV CENTRAL SUR No. 25'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        Visible = False
+        mmHeight = 4233
+        mmLeft = 12700
+        mmTop = 48419
         mmWidth = 34131
         BandType = 7
         LayerName = Foreground1
@@ -2418,8 +2419,8 @@ object Freportetiquet: TFreportetiquet
     XLSSettings.Subject = 'Report'
     XLSSettings.Title = 'Report'
     XLSSettings.WorksheetName = 'Report'
-    Left = 120
-    Top = 112
+    Left = 200
+    Top = 120
     Version = '18.01'
     mmColumnWidth = 0
     DataPipelineName = 'ppBDEPipeline1'
@@ -6936,6 +6937,620 @@ object Freportetiquet: TFreportetiquet
       end
     end
     object ppParameterList9: TppParameterList
+    end
+  end
+  object Reportecredito: TppReport
+    AutoStop = False
+    DataPipeline = ppBDEPipeline1
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.Orientation = poLandscape
+    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PrinterName = 'Default'
+    PrinterSetup.SaveDeviceSettings = True
+    PrinterSetup.mmMarginBottom = 0
+    PrinterSetup.mmMarginLeft = 0
+    PrinterSetup.mmMarginRight = 0
+    PrinterSetup.mmMarginTop = 0
+    PrinterSetup.mmPaperHeight = 210000
+    PrinterSetup.mmPaperWidth = 297000
+    PrinterSetup.PaperSize = 9
+    PrinterSetup.DevMode = {
+      2C1500004D006900630072006F0073006F006600740020005000720069006E00
+      7400200074006F00200050004400460000000000000000000000000000000000
+      0000000001040306DC005014032F0100020009009A0B3408640001000F005802
+      0200010058020300010041003400000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000100000000000000
+      010000000200000001000000FFFFFFFF47495334000000000000000000000000
+      44494E552200C80024032C113F5D7B7E00000000000000000000000000000000
+      0000000000000000000000000500000000000500000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000001000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000000000C8000000
+      534D544A000000001000B8007B00300038003400460030003100460041002D00
+      45003600330034002D0034004400370037002D0038003300450045002D003000
+      370034003800310037004300300033003500380031007D000000524553444C4C
+      00556E69726573444C4C00506170657253697A65004134004F7269656E746174
+      696F6E004C414E4453434150455F43433930005265736F6C7574696F6E005265
+      734F7074696F6E3100436F6C6F724D6F646500436F6C6F720000000000000000
+      000000002C1100005634444D01000000000000009C0A70221C000000EC000000
+      03000000FA014F0834E6774D83EE074817C03581D00000004C00000003000000
+      00080000000000000000000003000000000800002A0000000008000003000000
+      40000000560000000010000044006F00630075006D0065006E00740055007300
+      65007200500061007300730077006F0072006400000044006F00630075006D00
+      65006E0074004F0077006E0065007200500061007300730077006F0072006400
+      000044006F00630075006D0065006E0074004300720079007000740053006500
+      6300750072006900740079000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000}
+    Units = utMillimeters
+    ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+    DeviceType = 'Printer'
+    DefaultFileDeviceType = 'PDF'
+    EmailSettings.ReportFormat = 'PDF'
+    LanguageID = 'Default'
+    OpenFile = False
+    OutlineSettings.CreateNode = True
+    OutlineSettings.CreatePageNodes = True
+    OutlineSettings.Enabled = True
+    OutlineSettings.Visible = True
+    ThumbnailSettings.Enabled = True
+    ThumbnailSettings.Visible = True
+    ThumbnailSettings.DeadSpace = 30
+    PDFSettings.EmbedFontOptions = [efUseSubset]
+    PDFSettings.EncryptSettings.AllowCopy = True
+    PDFSettings.EncryptSettings.AllowInteract = True
+    PDFSettings.EncryptSettings.AllowModify = True
+    PDFSettings.EncryptSettings.AllowPrint = True
+    PDFSettings.EncryptSettings.AllowExtract = True
+    PDFSettings.EncryptSettings.AllowAssemble = True
+    PDFSettings.EncryptSettings.AllowQualityPrint = True
+    PDFSettings.EncryptSettings.Enabled = False
+    PDFSettings.EncryptSettings.KeyLength = kl40Bit
+    PDFSettings.EncryptSettings.EncryptionType = etRC4
+    PDFSettings.FontEncoding = feAnsi
+    PDFSettings.ImageCompressionLevel = 25
+    RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+    RTFSettings.DefaultFont.Color = clWindowText
+    RTFSettings.DefaultFont.Height = -13
+    RTFSettings.DefaultFont.Name = 'Arial'
+    RTFSettings.DefaultFont.Style = []
+    ShowCancelDialog = False
+    ShowPrintDialog = False
+    TextFileName = '($MyDocuments)\Report.pdf'
+    TextSearchSettings.DefaultString = '<FindText>'
+    TextSearchSettings.Enabled = True
+    XLSSettings.AppName = 'ReportBuilder'
+    XLSSettings.Author = 'ReportBuilder'
+    XLSSettings.Subject = 'Report'
+    XLSSettings.Title = 'Report'
+    XLSSettings.WorksheetName = 'Report'
+    Left = 120
+    Top = 120
+    Version = '18.01'
+    mmColumnWidth = 0
+    DataPipelineName = 'ppBDEPipeline1'
+    object ppHeaderBand6: TppHeaderBand
+      Background.Brush.Style = bsClear
+      Border.BorderPositions = [bpBottom]
+      Border.Visible = True
+      mmBottomOffset = 0
+      mmHeight = 38100
+      mmPrintPosition = 0
+      object razoncre: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'razoncre'
+        Caption = 'GRUPO ABARROTERO SAN MARTIN'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 6350
+        mmTop = 1058
+        mmWidth = 49741
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object ppLabel3: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'Label1'
+        Caption = 'LAS MARGARITAS, CHIAPAS'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 10583
+        mmTop = 6615
+        mmWidth = 38894
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object ppLabel4: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'Label2'
+        Caption = 'ATENDIO:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 7938
+        mmTop = 11377
+        mmWidth = 12700
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object usuariocre: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'usuariocre'
+        Caption = 'USUARIO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 9
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 47361
+        mmTop = 11377
+        mmWidth = 12700
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object clientecre: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'clientecre'
+        Caption = 'CLIENTE'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 6085
+        mmTop = 23283
+        mmWidth = 12171
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object fechacre: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'fechacre'
+        Caption = 'FECHA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 794
+        mmTop = 33867
+        mmWidth = 10584
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object foliocre: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'foliocre'
+        Caption = 'FOLIO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 50800
+        mmTop = 33867
+        mmWidth = 9261
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object ppLabel46: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'Label46'
+        Caption = 'CONDICION:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4234
+        mmLeft = 7938
+        mmTop = 16669
+        mmWidth = 16934
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object condicioncre: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'condicioncre'
+        Caption = 'CONDICION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 9
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 4234
+        mmLeft = 43921
+        mmTop = 16669
+        mmWidth = 16140
+        BandType = 0
+        LayerName = BandLayer10
+      end
+      object domiciliocre: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'domiciliocre'
+        Caption = 'DOMICILIO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4234
+        mmLeft = 1852
+        mmTop = 28046
+        mmWidth = 14817
+        BandType = 0
+        LayerName = BandLayer10
+      end
+    end
+    object ppDetailBand10: TppDetailBand
+      Background1.Brush.Style = bsClear
+      Background2.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 10054
+      mmPrintPosition = 0
+      object ppDBText13: TppDBText
+        DesignLayer = ppDesignLayer10
+        UserName = 'DBText13'
+        DataField = 'CANTIDAD'
+        DataPipeline = ppBDEPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        ParentDataPipeline = False
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppBDEPipeline1'
+        mmHeight = 4763
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 6085
+        BandType = 4
+        LayerName = BandLayer10
+      end
+      object ppDBText14: TppDBText
+        DesignLayer = ppDesignLayer10
+        UserName = 'DBText14'
+        DataField = 'PRODUCTO'
+        DataPipeline = ppBDEPipeline1
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Agency FB'
+        Font.Size = 9
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppBDEPipeline1'
+        mmHeight = 4763
+        mmLeft = 7938
+        mmTop = 0
+        mmWidth = 43055
+        BandType = 4
+        LayerName = BandLayer10
+      end
+      object ppDBText15: TppDBText
+        DesignLayer = ppDesignLayer10
+        UserName = 'DBText15'
+        DataField = 'TOTAL'
+        DataPipeline = ppBDEPipeline1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'ppBDEPipeline1'
+        mmHeight = 4763
+        mmLeft = 49213
+        mmTop = 5027
+        mmWidth = 10848
+        BandType = 4
+        LayerName = BandLayer10
+      end
+    end
+    object ppSummaryBand10: TppSummaryBand
+      Background.Brush.Style = bsClear
+      Border.BorderPositions = [bpTop]
+      Border.Visible = True
+      mmBottomOffset = 0
+      mmHeight = 71173
+      mmPrintPosition = 0
+      object CREDITO6: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'CREDITO6'
+        Border.BorderPositions = [bpTop]
+        Border.Visible = True
+        Caption = 'NOMBRE Y FIRMA DE CONFORMIDAD'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 1481
+        mmTop = 50294
+        mmWidth = 59796
+        BandType = 7
+        LayerName = BandLayer10
+      end
+      object CREDITO1: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'CREDITO1'
+        Caption = 'FECHA DE PAGO:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 1852
+        mmTop = 11777
+        mmWidth = 24077
+        BandType = 7
+        LayerName = BandLayer10
+      end
+      object FECHAPAGO: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'FECHAPAGO'
+        Caption = 'FECHA DE PAGO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 35454
+        mmTop = 11755
+        mmWidth = 23284
+        BandType = 7
+        LayerName = BandLayer10
+      end
+      object ppLabel52: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'Label52'
+        Caption = 'TOTAL='
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 11
+        Font.Style = []
+        Transparent = True
+        mmHeight = 5291
+        mmLeft = 15875
+        mmTop = 2117
+        mmWidth = 12965
+        BandType = 7
+        LayerName = BandLayer10
+      end
+      object totalcre: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'totalcre'
+        Caption = 'total'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 11
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 4498
+        mmLeft = 51329
+        mmTop = 2117
+        mmWidth = 7144
+        BandType = 7
+        LayerName = BandLayer10
+      end
+      object CREDITO2: TppLabel
+        DesignLayer = ppDesignLayer10
+        UserName = 'CREDITO2'
+        Caption = 
+          'DEBO Y PAGARE INCONDICIONALMENTE EN LA FECHA Y CANTIDAD AQUI EST' +
+          'IPULADAS POR  VALOR RECIBIDO EN MERCANCIA A MI ENTERA SATISFACCI' +
+          'ON. ESTE PAGARE DE NO SER CUBIERTO EN SU VENCIMIENTO, CAUSARA UN' +
+          ' INTERES MENSUAL.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        WordWrap = True
+        mmHeight = 22225
+        mmLeft = 0
+        mmTop = 18785
+        mmWidth = 60373
+        BandType = 7
+        LayerName = BandLayer10
+      end
+    end
+    object ppDesignLayers10: TppDesignLayers
+      object ppDesignLayer10: TppDesignLayer
+        UserName = 'BandLayer10'
+        LayerType = ltBanded
+        Index = 0
+      end
+    end
+    object ppParameterList10: TppParameterList
     end
   end
 end
