@@ -230,6 +230,7 @@ begin
   fverificausu.ShowModal;
   if fverificausu.verificar('invevisualizar')then
   begin
+    modulo.qryinventario.Open('select * from inventario order by producto');
     finventario.ShowModal;
   end;
 end;

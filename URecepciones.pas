@@ -127,7 +127,6 @@ begin
       Qryaux.Next;
     end;
 
-    showmessage('suma: '+inttostr(modulo.qryremiaux2['cantidad']+sumaDevolucion));
     if ((modulo.qryremiaux2['cantidad'])+sumaDevolucion) > (sumaRemision) then
     begin
       showmessage('Error: el articulo: '+modulo.qryremiaux2['producto']+' tiene:'+sLineBreak+
@@ -358,7 +357,7 @@ begin
         modulo.QryDevoluciones.Post;
 
         if modulo.QryExtras['manejar_inventario']=1 then
-          Finventario.aumentarInventario(modulo.qryremiaux2['clave'],modulo.qryremiaux2['clave_empaque'],modulo.qryremiaux2['cantidad']);
+          Finventario.aumentarInventario(modulo.qryremiaux2['clave'],'',modulo.qryremiaux2['cantidad']);
 
         modulo.qryremiaux2.Next;
       end;

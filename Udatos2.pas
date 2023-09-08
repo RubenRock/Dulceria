@@ -75,10 +75,10 @@ procedure TFdatos2.seleccionar_producto;
 begin
   if modulo.qryinventarioaux.RecordCount>0 then
   begin
-    //recepcion
+    {//recepcion
     if frecepciones.Efolio.Enabled then
       precio.Text:='0.00'
-    else
+    else }
      obtener_total; //devolucion
   end
 
@@ -88,29 +88,29 @@ procedure TFdatos2.obtener_total;
 begin
 
   //si es devolucion si debe poner precios
-  if not frecepciones.Efolio.Enabled then
+  //if not frecepciones.Efolio.Enabled then
+  //begin
+
+  if modulo.qryinventarioaux.RecordCount>0 then
   begin
+    precio.Text:=modulo.qryinventarioaux['precio_uni'];
 
-      if modulo.qryinventarioaux.RecordCount>0 then
-      begin
-        precio.Text:=modulo.qryinventarioaux['precio_uni'];
+    if trim(cantidad.Text)='6' then
+    begin
+      IF (strtofloat(modulo.qryinventarioaux['precio_seis']) > 0) then
+        precio.Text:=floattostr(strtofloat(modulo.qryinventarioaux['precio_seis'])/6);
+    end;
 
-        if trim(cantidad.Text)='6' then
-        begin
-          IF (strtofloat(modulo.qryinventarioaux['precio_seis']) > 0) then
-            precio.Text:=floattostr(strtofloat(modulo.qryinventarioaux['precio_seis'])/6);
-        end;
+    if trim(cantidad.Text)='12' then
+    begin
+      IF (strtofloat(modulo.qryinventarioaux['precio_doce']) > 0) then
+        precio.Text:=floattostr(strtofloat(modulo.qryinventarioaux['precio_seis'])/12);
+    end;
+  end
+  else
+    precio.Text:='0.00';
 
-        if trim(cantidad.Text)='12' then
-        begin
-          IF (strtofloat(modulo.qryinventarioaux['precio_doce']) > 0) then
-            precio.Text:=floattostr(strtofloat(modulo.qryinventarioaux['precio_seis'])/12);
-        end;
-      end
-      else
-        precio.Text:='0.00';
-
-  end;
+  //end;
 end;
 
 

@@ -59,6 +59,8 @@ type
     function verificarInventario(clave, empaque:string; cantidad:integer):boolean;
     procedure QryActualizarInventarioAfterExecute(DataSet: TFDDataSet);
     procedure FormActivate(Sender: TObject);
+    procedure QryActualizarInventarioAfterEdit(DataSet: TDataSet);
+    procedure QryActualizarInventarioAfterPost(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -197,7 +199,17 @@ begin
 end;
 
 
+procedure TFinventario.QryActualizarInventarioAfterEdit(DataSet: TDataSet);
+begin
+  modulo.Conector.Commit;
+end;
+
 procedure TFinventario.QryActualizarInventarioAfterExecute(DataSet: TFDDataSet);
+begin
+  modulo.Conector.Commit;
+end;
+
+procedure TFinventario.QryActualizarInventarioAfterPost(DataSet: TDataSet);
 begin
   modulo.Conector.Commit;
 end;
@@ -211,12 +223,11 @@ procedure TFinventario.reducirInventario(clave, empaque: string;cantidad:integer
 var
   piezas:integer;
 begin
-    qryaux.Open('select * from inventario_empaque where id = '+quotedstr(empaque));
-    if qryaux['clave'] = clave then
+    qryaux.Open('select * from inventario where CLAVE = '+quotedstr(clave));
+    qryaux.Last;
+    if qryaux.RecordCount > 0 then
     begin
-      QryActualizarInventario.Open('select * from EXISTENCIAS where clave ='+quotedstr(clave));
-      piezas := strtoint(QryActualizarInventario['existencia'])-(cantidad*qryaux['piezas']);
-      showmessage(inttostr(piezas));
+      piezas := strtoint(qryaux['existencia'])-cantidad;
       QryActualizarInventario.ExecSQL('update inventario set existencia ='+quotedstr(inttostr(piezas))+' where clave = '+quotedstr(clave));
     end;
 end;
@@ -300,12 +311,11 @@ procedure TFinventario.aumentarInventario(clave, empaque: string; cantidad: inte
 var
   piezas:integer;
 begin
-    qryaux.Open('select * from inventario_empaque where id = '+quotedstr(empaque));
-    if qryaux['clave'] = clave then
+    qryaux.Open('select * from inventario where CLAVE = '+quotedstr(clave));
+    qryaux.Last;
+    if qryaux.RecordCount > 0 then
     begin
-      QryActualizarInventario.Open('select * from EXISTENCIAS where clave ='+quotedstr(clave));
-      piezas := cantidad*qryaux['piezas']+strtoint(QryActualizarInventario['existencia']);
-      //SHOWMESSAGE('PIEZAS: '+inttostr(piezas));
+      piezas := cantidad+strtoint(qryaux['existencia']);
       QryActualizarInventario.ExecSQL('update inventario set existencia ='+quotedstr(inttostr(piezas))+' where clave = '+quotedstr(clave));
     end;
 end;

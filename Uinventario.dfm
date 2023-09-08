@@ -368,6 +368,13 @@ object Finventario: TFinventario
       end
       item
         Expanded = False
+        FieldName = 'existencia'
+        Title.Caption = 'EXISTENCIA'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
         FieldName = 'USUARIO'
         Width = 150
         Visible = True
@@ -514,6 +521,8 @@ object Finventario: TFinventario
     Top = 72
   end
   object QryActualizarInventario: TFDQuery
+    AfterEdit = QryActualizarInventarioAfterEdit
+    AfterPost = QryActualizarInventarioAfterPost
     AfterExecute = QryActualizarInventarioAfterExecute
     Connection = Modulo.Conector
     Left = 1000

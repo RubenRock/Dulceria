@@ -206,8 +206,8 @@ begin
 
   if((strtofloat(precio.Text)>0)and(strtoint(entero)>0)and(bclave))then
   begin
-      if modulo.QryExtras['manejar_inventario']=1 then
-        Finventario.verificarInventario(modulo.qryinventarioaux['clave'],modulo.QryEmpaque['id'],strtoint(trim(cantidad.Text)));
+      //if modulo.QryExtras['manejar_inventario']=1 then
+        //Finventario.verificarInventario(modulo.qryinventarioaux['clave'],modulo.QryEmpaque['id'],strtoint(trim(cantidad.Text)));
 
        if Csurtir.Checked then
         if modulo.QrySimilar.Locate('producto',modulo.qryinventarioaux['clave'],[]) then

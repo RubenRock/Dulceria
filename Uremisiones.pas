@@ -541,7 +541,7 @@ begin
 
 
         if modulo.QryExtras['manejar_inventario']=1 then
-            Finventario.reducirInventario(modulo.qryremiaux2['clave'],modulo.qryremiaux2['clave_empaque'],modulo.qryremiaux2['cantidad']);
+            Finventario.reducirInventario(modulo.qryremiaux2['clave'],'',modulo.qryremiaux2['cantidad']);
 
       end
       else
