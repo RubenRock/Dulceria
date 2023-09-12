@@ -511,7 +511,7 @@ object Finventario: TFinventario
     Left = 600
     Top = 280
     object Reiniciarinventarioa01: TMenuItem
-      Caption = 'Reiniciar inventario a 0'
+      Caption = 'Actualizar existencias'
       OnClick = Reiniciarinventarioa01Click
     end
   end

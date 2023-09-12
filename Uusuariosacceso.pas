@@ -67,6 +67,7 @@ type
     Ccortes: TCheckBox;
     grupo_cancelar: TGroupBox;
     cancelar: TCheckBox;
+    IEXISTENCIAS: TCheckBox;
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure AgregarClick(Sender: TObject);
@@ -174,6 +175,7 @@ begin
       if ieliminar.Checked then seleccionados(lista.SelectedItem,'inveeliminar');
       if inube.Checked then seleccionados(lista.SelectedItem,'invenube');
       if isubir.Checked then seleccionados(lista.SelectedItem,'invesubir');
+      if IEXISTENCIAS.Checked then seleccionados(lista.SelectedItem,'iexistencias');
       if prvisualizar.Checked then seleccionados(lista.SelectedItem,'provvisualizar');
       if pragregar.Checked then seleccionados(lista.SelectedItem,'provagregar');
       if prmodificar.Checked then seleccionados(lista.SelectedItem,'provmodificar');
@@ -218,6 +220,7 @@ begin
   ieliminar.Checked:=false;
   inube.Checked:=false;
   isubir.Checked:=false;
+  IEXISTENCIAS.Checked := false;
   prvisualizar.Checked:=false;
   pragregar.Checked:=false;
   prmodificar.Checked:=false;
@@ -255,6 +258,7 @@ begin
   ieliminar.Checked:=true;
   inube.Checked:=true;
   isubir.Checked:=true;
+  IEXISTENCIAS.Checked := TRUE;
   prvisualizar.Checked:=true;
   pragregar.Checked:=true;
   prmodificar.Checked:=true;
@@ -326,6 +330,7 @@ begin
   if localizar('inveeliminar') then  ieliminar.Checked:=true;
   if localizar('invenube') then  inube.Checked:=true;
   if localizar('invesubir') then  isubir.Checked:=true;
+  if localizar('iexistencias') then  IEXISTENCIAS.Checked:=true;
   if localizar('provvisualizar') then  prvisualizar.Checked:=true;
   if localizar('provagregar') then  pragregar.Checked:=true;
   if localizar('provmodificar') then  prmodificar.Checked:=true;

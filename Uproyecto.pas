@@ -356,7 +356,7 @@ begin
 
 
 
-  if modulo.QryExtras['version']<>'ENERO 21' then
+  if modulo.QryExtras['version']<>'11.09.2023' then
   begin
     showmessage('Estas usando una version diferente a la actual, no puedes usar el sistema');
     close;

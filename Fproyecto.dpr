@@ -65,7 +65,8 @@ uses
   Uintercambio in 'Uintercambio.pas' {Fintercambio},
   UReimpresiones in 'UReimpresiones.pas' {FReimpresiones},
   UretiroEfectivo in 'UretiroEfectivo.pas' {Fretiroefectivo},
-  UhistorialRetiros in 'UhistorialRetiros.pas' {FhistorialRetiros};
+  UhistorialRetiros in 'UhistorialRetiros.pas' {FhistorialRetiros},
+  UActualizarExistencias in 'UActualizarExistencias.pas' {FActualizarExistencias};
 
 {$R *.res}
 
@@ -132,5 +133,6 @@ begin
   Application.CreateForm(TFReimpresiones, FReimpresiones);
   Application.CreateForm(TFretiroefectivo, Fretiroefectivo);
   Application.CreateForm(TFhistorialRetiros, FhistorialRetiros);
+  Application.CreateForm(TFActualizarExistencias, FActualizarExistencias);
   Application.Run;
 end.

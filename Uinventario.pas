@@ -52,7 +52,6 @@ type
     procedure RclaveClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure gridKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure Reiniciarinventarioa01Click(Sender: TObject);
     procedure facturable;
     procedure aumentarInventario(clave, empaque:string; cantidad:integer);
     procedure reducirInventario(clave, empaque:string; cantidad:integer);
@@ -61,6 +60,7 @@ type
     procedure FormActivate(Sender: TObject);
     procedure QryActualizarInventarioAfterEdit(DataSet: TDataSet);
     procedure QryActualizarInventarioAfterPost(DataSet: TDataSet);
+    procedure Reiniciarinventarioa01Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -75,7 +75,7 @@ var
 implementation
 
 uses Umodulo, UVerificarUsuario, Uinventario_agregar, Uinventario_modificar,
-  UListaSimilares;
+  UListaSimilares, UActualizarExistencias;
 
 
 
@@ -234,18 +234,14 @@ end;
 
 procedure TFinventario.Reiniciarinventarioa01Click(Sender: TObject);
 begin
-  showmessage(modulo.qryinventario['producto']);
-  Qryaux.SQL.Clear;
-  Qryaux.SQL.Add('UPDATE remisiones SET CLAVE = '+quotedstr('')+', CLAVE_EMPAQUE= '+quotedstr('')+' where clave = '+quotedstr(modulo.qryinventario['clave']));
-  Qryaux.ExecSQL;
-
-  Qryaux.SQL.Clear;
-  Qryaux.SQL.Add('UPDATE RECEPCIONES SET CLAVE = '+quotedstr('')+', CLAVE_EMPAQUE= '+quotedstr('')+' where clave = '+quotedstr(modulo.qryinventario['clave']));
-  Qryaux.ExecSQL;
-
-  Qryaux.SQL.Clear;
-  Qryaux.SQL.Add('UPDATE DEVOLUCIONES SET CLAVE = '+quotedstr('')+', CLAVE_EMPAQUE= '+quotedstr('')+' where clave = '+quotedstr(modulo.qryinventario['clave']));
-  Qryaux.ExecSQL;
+  if fverificausu.verificar('iexistencias') then
+    if modulo.qryinventario.RecordCount>0 then
+    begin
+      FActualizarExistencias.Lclave.Caption:= modulo.qryinventario['clave'];
+      FActualizarExistencias.Eproducto.Text:= modulo.qryinventario['producto'];
+      FActualizarExistencias.Eexistencias.Text:= modulo.qryinventario['existencia'];
+      FActualizarExistencias.ShowModal
+    end;
 end;
 
 procedure TFinventario.RnombreClick(Sender: TObject);

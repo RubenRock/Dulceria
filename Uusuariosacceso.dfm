@@ -161,6 +161,7 @@ object Fusuariosaccesos: TFusuariosaccesos
     Height = 593
     Align = alClient
     TabOrder = 1
+    ExplicitTop = 137
     object Btodo: TSpeedButton
       Left = 48
       Top = 9
@@ -256,7 +257,7 @@ object Fusuariosaccesos: TFusuariosaccesos
     end
     object GroupBox9: TGroupBox
       Left = 520
-      Top = 292
+      Top = 324
       Width = 137
       Height = 117
       Caption = '  DEVOLUCIONES  '
@@ -370,7 +371,7 @@ object Fusuariosaccesos: TFusuariosaccesos
       Left = 192
       Top = 48
       Width = 137
-      Height = 221
+      Height = 265
       Caption = '  INVENTARIO  '
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -462,6 +463,20 @@ object Fusuariosaccesos: TFusuariosaccesos
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 5
+      end
+      object IEXISTENCIAS: TCheckBox
+        Left = 23
+        Top = 224
+        Width = 97
+        Height = 23
+        Caption = 'EXISTENCIAS'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 6
       end
     end
     object GroupBox3: TGroupBox
@@ -648,7 +663,7 @@ object Fusuariosaccesos: TFusuariosaccesos
     end
     object GroupBox6: TGroupBox
       Left = 24
-      Top = 292
+      Top = 324
       Width = 137
       Height = 125
       Caption = '  SALIDAS  '
@@ -690,7 +705,7 @@ object Fusuariosaccesos: TFusuariosaccesos
     end
     object GroupBox7: TGroupBox
       Left = 192
-      Top = 292
+      Top = 324
       Width = 137
       Height = 125
       Caption = '  CLIENTES  '
@@ -732,7 +747,7 @@ object Fusuariosaccesos: TFusuariosaccesos
     end
     object GroupBox8: TGroupBox
       Left = 360
-      Top = 292
+      Top = 324
       Width = 137
       Height = 77
       Caption = ' ABONOS '
@@ -760,7 +775,7 @@ object Fusuariosaccesos: TFusuariosaccesos
     end
     object GroupBox10: TGroupBox
       Left = 688
-      Top = 292
+      Top = 324
       Width = 137
       Height = 141
       Caption = '  EXTRAS  '
@@ -872,7 +887,7 @@ object Fusuariosaccesos: TFusuariosaccesos
     end
     object grupo_cancelar: TGroupBox
       Left = 858
-      Top = 292
+      Top = 324
       Width = 137
       Height = 77
       Caption = ' CANCELAR NOTAS '

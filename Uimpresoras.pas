@@ -14,6 +14,7 @@ type
     SpeedButton1: TSpeedButton;
     Cnotas: TComboBox;
     Ctickets: TComboBox;
+    Label1: TLabel;
     procedure FormActivate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
   private

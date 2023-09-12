@@ -3,7 +3,7 @@ object Fimpresora: TFimpresora
   Top = 0
   BorderStyle = bsDialog
   Caption = 'Impresoras'
-  ClientHeight = 113
+  ClientHeight = 129
   ClientWidth = 541
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -23,6 +23,19 @@ object Fimpresora: TFimpresora
     Height = 34
     Caption = 'OK'
     OnClick = SpeedButton1Click
+  end
+  object Label1: TLabel
+    Left = 27
+    Top = 111
+    Width = 100
+    Height = 13
+    Caption = 'Version 11.09.2023  '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsItalic]
+    ParentFont = False
   end
   object GroupBox1: TGroupBox
     Left = 8
