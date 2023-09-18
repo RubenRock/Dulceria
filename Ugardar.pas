@@ -861,6 +861,7 @@ begin
 
   modulo.Qryimpresora.Open('select * from impresora');
   freportetiquet.report1.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
+  freportetiquet.Reportecredito.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
   freportetiquet.report_matriz_punto.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
   freportetiquet.Report1_copia.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];
   freportetiquet.reporteTraspaso.PrinterSetup.PrinterName:=modulo.Qryimpresora['ticket'];

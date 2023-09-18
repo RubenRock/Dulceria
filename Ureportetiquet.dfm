@@ -5778,7 +5778,7 @@ object Freportetiquet: TFreportetiquet
     PrinterSetup.mmMarginLeft = 6350
     PrinterSetup.mmMarginRight = 6350
     PrinterSetup.mmMarginTop = 6350
-    PrinterSetup.mmPaperHeight = 297000
+    PrinterSetup.mmPaperHeight = 400000
     PrinterSetup.mmPaperWidth = 120000
     PrinterSetup.PaperSize = 256
     PrinterSetup.DevMode = {
@@ -6944,17 +6944,16 @@ object Freportetiquet: TFreportetiquet
     DataPipeline = ppBDEPipeline1
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
-    PrinterSetup.Orientation = poLandscape
-    PrinterSetup.PaperName = 'A4'
+    PrinterSetup.PaperName = 'Custom'
     PrinterSetup.PrinterName = 'Default'
     PrinterSetup.SaveDeviceSettings = True
     PrinterSetup.mmMarginBottom = 0
     PrinterSetup.mmMarginLeft = 0
     PrinterSetup.mmMarginRight = 0
     PrinterSetup.mmMarginTop = 0
-    PrinterSetup.mmPaperHeight = 210000
-    PrinterSetup.mmPaperWidth = 297000
-    PrinterSetup.PaperSize = 9
+    PrinterSetup.mmPaperHeight = 400000
+    PrinterSetup.mmPaperWidth = 120000
+    PrinterSetup.PaperSize = 256
     PrinterSetup.DevMode = {
       2C1500004D006900630072006F0073006F006600740020005000720069006E00
       7400200074006F00200050004400460000000000000000000000000000000000
