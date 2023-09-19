@@ -115,7 +115,7 @@ begin
                       quotedstr(trim(eprecio_uni.Text))+','+
                       quotedstr(trim(eprecio_seis.Text))+','+
                       quotedstr(trim(eprecio_doce.Text))+','+
-                      quotedstr('1')+','+//existencia
+                      quotedstr('0')+','+//existencia
                       trim(eiva.Text)+','+
                       quotedstr(trim(epiezas.Text))+','+
                       quotedstr('relacion')+','+ //relacionpz

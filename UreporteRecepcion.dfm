@@ -457,9 +457,9 @@ object FreporteRecepcion: TFreporteRecepcion
         Transparent = True
         DataPipelineName = 'ppBDEPipeline1'
         mmHeight = 4763
-        mmLeft = 48835
+        mmLeft = 11545
         mmTop = 4898
-        mmWidth = 10848
+        mmWidth = 48347
         BandType = 4
         LayerName = Foreground1
       end

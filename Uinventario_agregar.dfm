@@ -78,9 +78,6 @@ object Finventario_agregar: TFinventario_agregar
     Height = 137
     Align = alTop
     TabOrder = 1
-    ExplicitLeft = -8
-    ExplicitTop = 1
-    ExplicitWidth = 554
     object Label4: TLabel
       Left = 8
       Top = 5
