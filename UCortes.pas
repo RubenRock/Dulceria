@@ -168,6 +168,8 @@ begin
     begin
       showmessage('La fecha de inicio ya fue usada, aumenta un segundo por favor');
       ehoraini.Enabled:=true;
+      bcorte.Enabled := true;
+      bcorte.Visible:= true;
       ehoraini.SetFocus;
       EXIT;
     end;
