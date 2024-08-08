@@ -104,6 +104,12 @@ begin
       exit;
     end;
 
+    SQLRED.Open('select * from inventario');
+    if SQLRED.Locate('producto',trim(eproducto.Text),[]) then
+    begin
+      showmessage('Este producto ya existe en el inventario');
+      exit;
+    end;
 
     if not existe then
     begin
@@ -127,6 +133,7 @@ begin
       MODULO.qryinventarioaux.Close;MODULO.qryinventarioaux.Open;
 
       Finventario_agregar.Caption:= 'Actualizar inventario';
+      eclave.Caption:=datetimetostr(now);
       showmessage('¡¡Articulo guardado!!');
 
       limpiar;
