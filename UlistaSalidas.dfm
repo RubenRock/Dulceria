@@ -330,12 +330,6 @@ object FListaSalidas: TFListaSalidas
         Expanded = False
         FieldName = 'USUARIO'
         Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'hora'
-        Title.Caption = 'HORA'
-        Visible = True
       end>
   end
 end

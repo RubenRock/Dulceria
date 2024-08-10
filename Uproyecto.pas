@@ -201,7 +201,9 @@ procedure TFPrincipal.Acttualizar1Click(Sender: TObject);
 begin
   modulo.QrySalidas.Open('select * from salidas order by folio desc ROWS 30');
   flistasalidas.Ebuscar.Clear;
-  flistasalidas.ShowModal;
+  fverificausu.ShowModal;
+  if fverificausu.verificar('remiagregar')then
+    flistasalidas.ShowModal;
 end;
 
 procedure TFPrincipal.Actualizar1Click(Sender: TObject);

@@ -60,10 +60,16 @@ begin
     fecha.Date:=date;
     sqlaux.Close;
     sqlaux.Open('select MAX(folio) as maxfolio from salidas');
-    if sqlaux.RecordCount>0then
-      efolio.Text:=inttostr(sqlaux['maxfolio']+1)
+
+    if sqlaux['maxfolio']= null then
+      efolio.Text:='1'
     else
-      efolio.Text:='1';
+    begin
+      if sqlaux.RecordCount>0then
+        efolio.Text:=inttostr(sqlaux['maxfolio']+1)
+      else
+        efolio.Text:='1';
+    end;
   end;
 end;
 
@@ -84,10 +90,12 @@ begin
       begin
         sqlaux.Close;
         sqlaux.Open('select max(folio) as maxfolio from salidas');
-        if sqlaux.RecordCount>0then
-          efolio.Text:=inttostr(sqlaux['maxfolio']+1)
+
+        if sqlaux['maxfolio']= null then
+          efolio.Text:='1'
         else
-          efolio.Text:='1';
+          efolio.Text:=inttostr(sqlaux['maxfolio']+1);
+
         modulo.QrySalidas.Append;
         modulo.QrySalidas['fecha']:=datetostr(fecha.Date)+ ' '+timetostr(time);
       end
@@ -105,6 +113,8 @@ begin
       panel.ShowHint:=true;
       FormActivate(sender);
     end
+    else
+      showmessage('No tienes permiso de guardar salidas');
   end;
 end;
 
